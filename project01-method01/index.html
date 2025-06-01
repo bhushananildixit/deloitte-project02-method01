@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Option Select</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="question-header">
+      <div class="question-number">
+        Question<br><span>01/02</span>
+      </div>
+      <div class="question-text">
+        <p>
+          Below are three options on how to respond to the scenario above. Image question the client side pings you and tells that they have a personal emergency and will need to be away from work.<br>
+          <br>
+          You will ...
+        </p>
+        <p class="subtext">
+          <i>Below are three options on how to respond to the scenario above. Please choose the response that resonates most with you and click <b>Next</b> to proceed.</i>
+        </p>
+      </div>
+    </div>
+    <form class="options-form">
+      <div class="options-grid">
+        <label class="option-card">
+          <img src="./images/iron-man-2560x2494-infinity-gauntlet-hd-16412.jpg" alt="Option 1">
+          <input type="checkbox" name="option">
+        </label>
+        <label class="option-card">
+          <img src="./images/Complex_eLearning_322W_322H.png" alt="Option 2">
+          <input type="checkbox" name="option">
+        </label>
+        <label class="option-card">
+          <img src="./images/ELearning.png" alt="Option 3">
+          <input type="checkbox" name="option">
+        </label>
+        <label class="option-card">
+          <img src="./images/Medium_Complexity_E_Learning_322W_322H.png" alt="Option 4">
+          <input type="checkbox" name="option">
+        </label>
+      </div>
+      <button type="submit" class="submit-btn" disabled>Submit</button>
+    </form>
+  </div>
+  <script>
+    
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const submitBtn = document.querySelector('.submit-btn');
+    checkboxes.forEach(cb => cb.addEventListener('change', () => {
+      submitBtn.disabled = !Array.from(checkboxes).some(cb => cb.checked);
+    }));
+  </script>
+</body>
+</html>
