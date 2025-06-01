@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Upload Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Photo Upload Checker</h1>
+    <form id="photoForm">
+      <label>Minimum Side (L): <input type="text" id="minLength" value="1000" readonly></label>
+      <label>Upload Photo: <input type="file" id="photoFile" accept="image/*" required></label>
+      <div id="photoPreview"></div>
+      <button type="submit">Check</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
